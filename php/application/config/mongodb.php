@@ -1,17 +1,17 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 // Generally will be localhost if you're querying from the machine that Mongo is installed on
-$config['mongo_host'] = getenv('OPENSHIFT_DB_HOST');
+$config['mongo_host'] = getenv('OPENSHIFT_NOSQL_DB_HOST');
 
 // Generally will be 27017 unless you've configured Mongo otherwise
-$config['mongo_port'] = getenv('OPENSHIFT_DB_PORT');
+$config['mongo_port'] = getenv('OPENSHIFT_NOSQL_DB_PORT');
 
 // The database you want to work from (required)
 $config['mongo_db'] = "appcelerator";
 
 // Leave blank if Mongo is not running in auth mode
-$config['mongo_user'] = getenv('OPENSHIFT_DB_USERNAME');
-$config['mongo_pass'] = getevn('OPENSHIFT_DB_PASSWORD');
+$config['mongo_user'] = getenv('OPENSHIFT_NOSQL_DB_USERNAME');
+$config['mongo_pass'] = getevn('OPENSHIFT_NOSQL_DB_PASSWORD');
 
 // Persistant connections
 $config['mongo_persist'] = TRUE;
