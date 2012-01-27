@@ -74,14 +74,7 @@ class Api extends REST_Controller {
 
         $beers = json_decode($this->curl->execute());
         if (isset($beers->status) && $beers->status == 'success') {
-           // echo 'User has been updated.';
-        } else {
-            echo 'Something has gone wrong';
-        }
-        
-        
-        if ($beers) {
-            $this->response($beers, 200); // 200 being the HTTP response code
+           $this->response($beers, 200); // 200 being the HTTP response code
         } else {
             $this->response(NULL, 404);
         }

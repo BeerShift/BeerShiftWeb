@@ -357,8 +357,19 @@ $config['rewrite_short_tags'] = FALSE;
 */
 $config['proxy_ips'] = '';
 
+/*
+ *  BreweryDB endpoint for searching beers
+ * 
+ *  Note:  This is the playground endpoint for sample purposes.  If you are using this in your own app,
+ *         you should signup for a brewerydb.com v2 api and key
+ * 
+*/
 $config['pintlab_url'] = 'http://api.playground.brewerydb.com/search/';
 
+/* 
+ * Publicly available api_key for v2 of the playground api
+ * 
+*/
 $config['pintlab_key'] = 'A1029384756B';
 
 
