@@ -11,7 +11,7 @@ $config['mongo_db'] = "appcelerator";
 
 // Leave blank if Mongo is not running in auth mode
 $config['mongo_user'] = getenv('OPENSHIFT_NOSQL_DB_USERNAME');
-$config['mongo_pass'] = getevn('OPENSHIFT_NOSQL_DB_PASSWORD');
+$config['mongo_pass'] = getenv('OPENSHIFT_NOSQL_DB_PASSWORD');
 
 // Persistant connections
 $config['mongo_persist'] = TRUE;
