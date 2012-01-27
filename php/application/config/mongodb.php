@@ -7,7 +7,7 @@ $config['mongo_host'] = getenv('OPENSHIFT_NOSQL_DB_HOST');
 $config['mongo_port'] = getenv('OPENSHIFT_NOSQL_DB_PORT');
 
 // The database you want to work from (required)
-$config['mongo_db'] = "appcelerator";
+$config['mongo_db'] = "beershift";
 
 // Leave blank if Mongo is not running in auth mode
 $config['mongo_user'] = getenv('OPENSHIFT_NOSQL_DB_USERNAME');
