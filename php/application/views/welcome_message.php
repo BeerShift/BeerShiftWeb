@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Welcome to BeerShift</title>
-
+        <link rel="SHORTCUT ICON" href="http://www.redhat.com/favicon.ico" />
 	<style type="text/css">
 
 	::selection{ background-color: #E13300; color: white; }

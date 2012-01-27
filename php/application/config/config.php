@@ -357,6 +357,10 @@ $config['rewrite_short_tags'] = FALSE;
 */
 $config['proxy_ips'] = '';
 
+$config['pintlab_url'] = 'http://api.playground.brewerydb.com/search/';
+
+$config['pintlab_key'] = 'A1029384756B';
+
 
 /* End of file config.php */
 /* Location: ./application/config/config.php */

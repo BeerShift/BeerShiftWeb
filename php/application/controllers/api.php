@@ -64,11 +64,12 @@ class Api extends REST_Controller {
         }
         
         $this->load->library('curl');
-        $this->curl->create('http://api.playground.brewerydb.com/search/');
+        $this->curl->create($this->config->item('pintlab_url'));
         $this->curl->post(array(
-            'key' => 'A1029384756B',
+            'key' => $this->config->item('pintlab_key'),
             'q' => $this->get('name'),
-            'type' => 'beer'
+            'type' => 'beer',
+            'withBreweries' => 'Y'
     ));
 
         $beers = json_decode($this->curl->execute());
