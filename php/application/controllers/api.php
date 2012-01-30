@@ -8,7 +8,9 @@ class Api extends REST_Controller {
         if (!$this->get('username')) {
             $this->response(NULL, 400);
         }
-        $user = $this->usermodel->getUser($this->get('username'));
+		$username = strtolower($this->post('username'));
+		
+        $user = $this->usermodel->getUser($username);
 
         if ($user) {
             $this->response($user, 200); // 200 being the HTTP response code
@@ -25,7 +27,8 @@ class Api extends REST_Controller {
             $this->response(NULL, 400);
         }
 
-        $result = $this->usermodel->createUser($this->post('username'), $this->post('password'));
+		$username = strtolower($this->post('username'));
+        $result = $this->usermodel->createUser($username, $this->post('password'));
 
         if ($result === FALSE) {
             $this->response(array('status' => 'failed'));
@@ -38,7 +41,8 @@ class Api extends REST_Controller {
         if (!$this->get('username')) {
             $this->response(NULL, 400);
         }
-        $user = $this->usermodel->getUserBeers($this->get('username'));
+		$username = strtolower($this->post('username'));
+        $user = $this->usermodel->getUserBeers($username);
 
         if ($user) {
             $this->response($user, 200); // 200 being the HTTP response code
@@ -91,7 +95,8 @@ class Api extends REST_Controller {
             $this->response(NULL, 400);
         }
 
-        $result = $this->usermodel->drinkBeer($this->post('username'), $this->post('beerName'), $this->post('when'));
+		$username = strtolower($this->post('username'));
+        $result = $this->usermodel->drinkBeer($username, $this->post('beerName'), $this->post('when'));
 
         if ($result === FALSE) {
             $this->response(array('status' => 'failed'));
