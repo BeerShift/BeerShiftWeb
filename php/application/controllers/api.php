@@ -8,7 +8,7 @@ class Api extends REST_Controller {
         if (!$this->get('username')) {
             $this->response(NULL, 400);
         }
-		$username = strtolower($this->post('username'));
+		$username = strtolower($this->get('username'));
 		
         $user = $this->usermodel->getUser($username);
 
@@ -41,7 +41,7 @@ class Api extends REST_Controller {
         if (!$this->get('username')) {
             $this->response(NULL, 400);
         }
-		$username = strtolower($this->post('username'));
+		$username = strtolower($this->get('username'));
         $user = $this->usermodel->getUserBeers($username);
 
         if ($user) {
