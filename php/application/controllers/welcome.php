@@ -5,7 +5,7 @@ class Welcome extends CI_Controller {
 	
 	public function index()
 	{
-                $data['beers'] = $this->usermodel->getFirehoseBeers();
+        $data['beers'] = $this->usermodel->getFirehoseBeers();
 		$this->load->view('welcome_message', $data);
 	}
 }
