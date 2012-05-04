@@ -364,13 +364,13 @@ $config['proxy_ips'] = '';
  *         you should signup for a brewerydb.com v2 api and key
  * 
 */
-$config['pintlab_url'] = 'http://api.playground.brewerydb.com/search/';
+$config['pintlab_url'] = 'http://api.brewerydb.com/v2/search';
 
 /* 
  * Publicly available api_key for v2 of the playground api
  * 
 */
-$config['pintlab_key'] = 'A1029384756B';
+$config['pintlab_key'] = '2f1549c9d86ea5088379d278c0451822';
 
 
 /* End of file config.php */
