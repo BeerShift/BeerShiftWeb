@@ -76,6 +76,8 @@ class Api extends REST_Controller {
             'withBreweries' => 'Y'
     ));
 
+	echo "blah\n";
+	echo $this->curl->execute();
         $beers = json_decode($this->curl->execute());
 	echo $beers;
         if (isset($beers->status) && $beers->status == 'success') {
