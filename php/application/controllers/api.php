@@ -71,7 +71,7 @@ class Api extends REST_Controller {
         $this->curl->create($this->config->item('pintlab_url'));
 	echo $this->config->item('pintlab_url');
 	echo "\n".$this->config->item('pintlab_key');
-        $this->curl->post(array(
+        $this->curl->get(array(
             'key' => $this->config->item('pintlab_key'),
             'q' => $this->get('name'),
             'type' => 'beer',
