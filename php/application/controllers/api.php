@@ -77,6 +77,7 @@ class Api extends REST_Controller {
     ));
 
         $beers = json_decode($this->curl->execute());
+	echo $beers;
         if (isset($beers->status) && $beers->status == 'success') {
            $this->response($beers, 200); // 200 being the HTTP response code
         } else {
