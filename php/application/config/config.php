@@ -360,17 +360,17 @@ $config['proxy_ips'] = '';
 /*
  *  BreweryDB endpoint for searching beers
  * 
- *  Note:  This is the playground endpoint for sample purposes.  If you are using this in your own app,
+ *  Note:  This is the endpoint for sample purposes.  If you are using this in your own app,
  *         you should signup for a brewerydb.com v2 api and key
  * 
 */
 $config['pintlab_url'] = 'http://api.brewerydb.com/v2/search';
 
 /* 
- * Publicly available api_key for v2 of the playground api
+ * API Key for BeerShift
  * 
 */
-$config['pintlab_key'] = '2f1549c9d86ea5088379d278c0451822';
+$config['pintlab_key'] = 'YourAPIKey';
 
 
 /* End of file config.php */
