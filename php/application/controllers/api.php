@@ -68,7 +68,7 @@ class Api extends REST_Controller {
         }
         
         $this->load->library('curl');
-        $this->curl->create($this->config->item('pintlab_url'));
+        $this->curl->create("http://api.brewerydb.com/v2/search");
         $this->curl->post(array(
             'key' => $this->config->item('pintlab_key'),
             'q' => $this->get('name'),
