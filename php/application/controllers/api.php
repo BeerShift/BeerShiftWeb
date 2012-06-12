@@ -80,8 +80,11 @@ class Api extends REST_Controller {
     ));
 
 	echo "blah\n";
-	echo $this->curl->execute();
+        
         $beers = json_decode($this->curl->execute());
+        $this->curl->debug();
+        echo "\n\nblah\n\n\n";
+        $this->curl->debug_request();
 	echo $beers;
         if (isset($beers->status) && $beers->status == 'success') {
            $this->response($beers, 200); // 200 being the HTTP response code
