@@ -68,25 +68,9 @@ class Api extends REST_Controller {
         }
         
         $this->load->library('curl');
-        $this->curl->create("http://api.brewerydb.com/v2/search?key=".$this->config->item('pintlab_key')."&q=".$this->get('name')."&type=beer&withBreweries=Y");
-        $this->curl->debug();
-        echo "\n\nblah\n\n\n";
-        $this->curl->debug_request();
-        /*
-        $this->curl->post(array(
-            'key' => $this->config->item('pintlab_key'),
-            'q' => $this->get('name'),
-            'type' => 'beer',
-            'withBreweries' => 'Y'
-    ));
-*/
-	echo "blah\n";
+        $this->curl->create($this->config->item('pintlab_url')."?key=".$this->config->item('pintlab_key')."&q=".$this->get('name')."&type=beer&withBreweries=Y");
         
         $beers = json_decode($this->curl->execute());
-        $this->curl->debug();
-        echo "\n\nblah\n\n\n";
-        $this->curl->debug_request();
-	echo $beers;
         if (isset($beers->status) && $beers->status == 'success') {
            $this->response($beers, 200); // 200 being the HTTP response code
         } else {
