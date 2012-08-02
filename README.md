@@ -16,7 +16,7 @@ Quickstart
 3) Add this upstream repo
 
     cd beershift
-    git remote add upstream -m master git://github.com/gshipley/BeerShiftWeb.git
+    git remote add upstream -m master git://github.com/BeerShift/BeerShiftWeb.git
     git pull -s recursive -X theirs upstream master
 
 4) Then push the repo upstream
